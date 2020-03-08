@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice</title>
+</head>
+<body>
+<script type="text/javascript">
+	function validate(){
+	var email = document.myform.email.value;
+	var names = document.myform.name1.value;
+	var nameformat=/^[A-z ]{6,30}$/;
+	var format = /^[A-z09]+@[A-z09]+\.[A-z]{2,3}$/;
+
+	if(!email.match(format)){
+		alert("enter valid email");
+		return false;
+	}
+	else if (!name.match(nameformat)){
+		alert("type valid name");
+		return false;
+	}
+	else{
+		alert("Thanks");
+		return true;
+	}
+}
+</script>
+<form name=myform onsubmit="return validate()">
+	<input type="text" name="email"> 
+	<input type="text" name="name1"> 
+	<input type="submit" name="submit">
+
+</form>
+</body>
+</html>

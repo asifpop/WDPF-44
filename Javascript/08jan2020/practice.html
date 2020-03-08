@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime</title>
+</head>
+<body>
+<script type="text/javascript">
+	function testprime(){
+	var a = Number(prompt("Enter Number:",""));
+	if (a==1){
+		return a+" is not a prime Number";
+	}
+	else if (a==2){
+		return a+ " is not a prime Number";
+	}
+	else {
+		for (i=2;i<a;i++){
+			if(a%i==0){
+				return a+" is not a prime number."
+			}
+		}
+		return a+" is a prime Number."
+	}
+}
+document.write(testprime());
+</script>
+</body>
+</html>

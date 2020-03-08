@@ -1,0 +1,56 @@
+<html>  
+<head>  
+	<title>Simple Validation</title>  
+	<script language="JavaScript">  
+	function CheckItOut(form) {    
+	
+	   var yourName=document.folks.info.value;        
+		var dist= document.folks.division.value;
+		var email=document.folks.email.value;
+		var format = /^[A-z0-9]+@[A-z0-9]+\.[A-z]{2,3}$/;//^ is for beginning of email and $ is for ending.
+	if(yourName=="") { 
+	   alert("You know your name don\’t you? \n So type it in!");         
+	   return false;       
+	} 
+	else if(yourName.length<6){
+		alert("name should be atleast six character")
+		return false;
+	}
+	else if(dist==""||dist==null){
+		alert("Please select district");
+		return false;
+	}
+	else if(email==""|| email==null){
+		alert("put email")
+		return false;
+	}
+	else if(!email.match(format)){
+		alert("put valid email")
+		return false;
+	}
+	
+	else {
+		alert("Thanks, " + yourName + " for sending in your name.");  
+	    return true;     
+	   } 
+}
+</script>  
+</head>  
+<body>  
+	<form name="folks" onSubmit="return CheckItOut(this)" >  Your Name Please:  <input type=text name="info"><br>
+		<select name="division">
+			<option value="">Select One Division</option>
+			<option value="1">Dhaka</option>
+			<option value="2">Chittagong</option>
+			<option value="3">Rajshahi</option>
+			<option value="4">Khulna</option>
+			<option value="5">Barishal</option>
+			<option value="6">Sylhet</option>
+		</select> 
+		<br>
+		<input type="text" name="email">
+	
+		<p><input type=submit value="Click to Validate and Submit" ></p> 
+		</form>  
+</body>  
+</html> 

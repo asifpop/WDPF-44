@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta/>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	function checkPrime(){
+		var x = Number(document.myform.num.value);
+		if(x==1){
+			return x+" is not a prime number.";
+		}
+		else if(x==2){
+			return x+" is a prime number";
+		}
+		else {
+					for(i=2;i<x;i++){
+								if(x%i==0){
+									return x+" is not a prime number.";
+								}	
+					}
+				
+			return x+" is a prime number";
+		}
+		
+	}
+</script>
+
+<form name = "myform">
+	<input type = "number" name="num">
+    <input type = "button" value = "Submit" onclick = "document.getElementById('show').innerHTML=checkPrime()">
+</form>
+<p id="show"></p>
+</body>
+</html>

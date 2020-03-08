@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Function</title>
+</head>
+<body>
+	<div id="show"></div>
+	
+	<h2>User defined function without parameter</h2>
+
+
+
+	<script type="text/javascript">
+		
+		/*var year = prompt("Enter Year: ","");
+		year = parseInt(year);
+		function is_leap_year(year){
+			if((year%400==0)||(year % 4 == 0) && (year % 100 !=0)){
+				document.getElementById("show").innerHTML="<h1>Leap year</h1>";
+			}
+			else{
+				document.getElementById("show").innerHTML=" <h1>Not a Leap year</h1>";
+			}
+		}
+		is_leap_year(year);*/
+	
+		/*function addition(){
+			var x = 10;
+			var y = 20;
+			var z = x + y;
+			document.write(z);
+		}
+		addition();*/
+
+
+
+	</script>
+	<h2>User defined function without parameter</h2>
+	<script type="text/javascript">
+		
+
+		/*function myAddition(x,y){
+
+			var total = x + y;
+			document.write(total + "<br/>");
+		}
+		myAddition(20,30);
+		myAddition(50,300);*/
+
+
+
+	</script>
+	<h2>Days to minutes function</h2>
+	<script type="text/javascript">
+		/*function daystoMinute(x){
+			var min = x*24*60;
+			return x + " Days to Minutes : " + min;
+			}
+		var output = daystoMinute(5);
+		document.getElementById("show").innerHTML = output;*/
+		
+	</script>
+	<script type="text/javascript">
+		var mountain = new Image();
+		mountain.src="Mountain.jpg";
+		var sea = new Image();
+		sea.src="Sea.jpg";
+		function switch2(){
+			document.sample.src = mountain.src;
+		}
+
+		function switch1(){
+			document.sample.src = sea.src;
+		}
+
+	</script>
+	<a href="#" onmouseover="switch2()" onmouseout="switch1()">
+		<img src="Mountain.jpg" name="sample" width="600">
+	</a>
+
+</body>
+</html>

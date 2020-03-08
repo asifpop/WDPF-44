@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=email]:valid {
+  background-color: red;
+  color:white;
+}
+input[type=email]:invalid {
+  background-color:green;
+  color:white;
+}
+
+input[type=url]:valid {
+  background-color: red;
+	color:white;
+}
+input[type=url]:invalid {
+  background-color: green;
+	color:white;
+}
+
+</style>
+</head>
+<body>
+
+<h3>A demonstration of the :valid selector.</h3>
+
+<input type="email" required="">
+<input type="url" required="">
+
+<p>Try typing an illegal e-mail address, to see the styling disappear.</p>
+
+<p><strong>Note</strong>: The :valid selector is not supported in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+</html>

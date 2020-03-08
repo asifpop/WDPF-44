@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice</title>
+</head>
+<body>
+<input type="number" name="age1" id="age">
+<button onclick="check()">Check</button>
+<p id="demo"></p>
+
+<script type="text/javascript">
+	function check(){
+	var x = document.getElementById("age").value;
+	result = (x<18)? "Too young":"Old Enough";
+	document.getElementById("demo").innerHTML = result + "To Vote";
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script>
+    
+	var found = "Email is missing @ symbol";
+	var emailAd = prompt("ENter email address", "");
+	for (i=0; i<=emailAd.length; i++){
+		var findAt=emailAd.charAt(i);
+		if(findAt=="@"){
+			
+			found="Email has @ symbol";
+			
+			}
+			
+	
+	}
+	document.write(found);
+    
+    </script>
+</body>
+</html>

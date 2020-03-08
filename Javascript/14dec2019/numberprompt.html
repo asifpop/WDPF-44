@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Prompt</title>
+</head>
+<body>
+	<div id="Show"></div>
+	<script>
+		
+		var x = prompt("Please enter first number: ");
+		var y = prompt("Please enter 2nd number: ");
+		x = parseInt(x);
+		y = parseInt(y);
+		var total = x + y;
+		/*document.write("<p>The first number is: " + x + "</p>");
+		document.write("<p>The last number is: " + y + "</p>");
+		document.write("The total is: " + total);*/
+		var output = "";
+		output+="<p>The first number is: " + x + "</p>"
+		output+="<p>The last number is: " + y + "</p>"
+		output+="The total is: " + total;
+		document.getElementById('Show').innerHTML = output;
+
+	</script>
+</body>
+</html>

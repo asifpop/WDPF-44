@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+
+<script type="text/javascript">
+	function CheckItOut(form){      
+		 var yourName=document.folks.info.value; 
+		 var dist = document.folks.district.value;
+		 var emaiValid = document.folks.email.value; 
+		 var format = /^[A-z0-9]+@[A-z0-9]+\.[A-z]{2,3}$/;     
+		 	if(yourName==""){            
+		  		alert("Please enter your name");              
+		  		return false;        
+				} else if(yourName.length<6){
+				alert("Name should be at least 6 characters")
+				return false;
+
+				}else if(dist==""){
+					alert("Select any one district");
+					return false;  
+				}else if(emaiValid==""){
+				alert("Please enter your email");
+				return false;
+					}else if(!emiValid.match(format)){
+
+				alert("Please enter your email");
+				return false;
+
+					}
+
+					else{             
+			//alert("Thanks, " + yourName + " for sending in your name.");// 
+				return true;       
+		 } 
+	 } 
+</script>   
+
+</head>
+<body>  
+	<h1>Validation Form</h1>
+
+<form name="folks" onSubmit="return CheckItOut(this)">
+
+	Your Name Please: <br>	
+	<input type=text name="info"><p>
+
+	District: <br>		
+	<select name="district">	
+		<option value="">Select any one</option>
+		<option value="dhaka">Dhaka</option>
+		<option value="rajshahi">Rajshahi</option>
+		<option value="barisal">Barisal</option>
+	</select><br>
+
+	Email:<br>	
+	<!--<input type="email" name="email"><br><br>-->
+	<input type="text" name="email">
+	<input type=submit value="Click to Validate and Submit">  
+</form> <!--Form Validation:submission dile value lost hy.  -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Form</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--JQuery Link-->
+	<script src="js/jquery.min.js"></script>
+	<!--Bootstrap Link-->
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<form action="">
+			<div class="form-group">
+				<label for="">Full Name:</label>
+				<input type="text" name="fullname" placeholder="Enter Your Full Name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="">Gender:</label>
+			<div class="radio">
+				<label for=""><input type="radio" name="gender" value="male">Male</label>
+			</div>
+			<div class="radio">
+				<label for=""><input type="radio" name="gender" value="female">Female</label>	
+			</div>
+			</div>
+			<div class="form-group">
+				<label for="">Address:</label>
+				<textarea name="address" id="" cols="30" rows="10" placeholder="Your Address" class="form-control"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="">District</label>
+				<select name="" id="" class="form-control">
+					<option value="">Select One</option>
+					<option value="">Dhaka</option>
+					<option value="">Noakhali</option>
+					<option value="">Rajshahi</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="">Hobbies:</label>
+				<div class="checkbox">
+					<label for=""><input type="checkbox" name="php" value="php">PHP</label>
+					<label for=""><input type="checkbox" name="php" value="java">java</label>
+					<label for=""><input type="checkbox" name="php" value="oracle">Oracle</label>
+				</div>
+			</div>
+			<input type="submit" name="submit" value="SUBMIT" class="btn btn-danger">
+		</form>
+	</div>
+</body>
+</html>

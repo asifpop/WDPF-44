@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practice</title>
+</head>
+<body>
+	
+<script>
+	function validate(){
+		var n = document.myform.name.value;
+		var nameValid = /^[A-z ]{6,32}$/;
+		var email = document.myform.email.value;
+		var emailValid = /^[A-z0-9]+@[A-z0-9]+\.[A-z]{2,3}$/;
+		var gend = document.myform.gender.value;
+		var dist = document.myform.dist.value;
+
+		if(!n.match(nameValid)){
+			alert("Enter valid name within 6 and 32 character.");
+			return false;
+		}
+		else if (!email.match(emailValid)){
+			alert("enter valid email address.")
+			return false;
+		}
+		else if (gend==""||gend==null){
+			alert("please select gender.");
+			return false;
+		}
+		else if (dist==""||dist==null){
+			alert("please select District.");
+			return false;
+		}
+		else{
+			var mywin = window.open("","mywin", "height:400", "width:400");
+			mywin.document.write("Name:"+n+"<br>")
+			mywin.document.write("Email:"+email+"<br>")
+			mywin.document.write("Gender:"+gend+"<br>")
+			mywin.document.write("District:"+dist+"<br>")
+			return true;
+		}
+	}
+
+</script>
+
+<form name="myform" onsubmit="return validate()">
+	
+<label for="">Name:</label><input type="text" name="name">
+<label>Email:</label><input type="text" name="email">
+<label for="">Gender:</label><label for="">Male:</label><input type="radio" name="gender" value="Male">
+							 <label for="">Female:</label><input type="radio" name="gender" value="Female">
+<label for="">District</label>
+<select name="dist" id="">
+	
+	<option value="">Select One</option>
+	<option value="Dhaka">Dhaka</option>
+	<option value="Chittagong">Chittagong</option>
+	<option value="Rajshahi">Rajshahi</option>
+	<option value="Vola">Vola</option>
+
+</select>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>

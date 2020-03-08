@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Html form Again</title>
+</head>
+<body>
+	<h2>Personal Details</h2>
+	<form action="#" method="post">
+		<fieldset>
+			<legend>Login Info</legend>
+			<label>Email</label><br>
+			<input type="email" name="email" placeholder="Enter Email"><br>
+			<label>Password</label>
+			<input type="password" name="password" placeholder="enter password"><br>
+			<input type="password" name="repassword" placeholder="retype password"><br>
+		</fieldset>
+		<fieldset>
+			<legend>Personal details</legend>
+			<input type="text" name="name"><br>
+			<textarea name="address" placeholder="Enter address"></textarea><br>
+			<select name="district">
+				<optgroup label="Dhaka">
+					<option>Dhaka</option>
+					<option>comilla</option>
+				</optgroup>
+				<optgroup label="Noakhali">
+					<option>noakhali</option>
+					<option>Barishal</option>
+					<option>CHittagong</option>
+				</optgroup>
+			</select><br>
+
+			<label>hobbies</label>
+			Cricket<input type="checkbox" name="cricket" value="cric">
+			Football<input type="checkbox" name="Football" value="foot">
+			Handball<input type="checkbox" name="hand" value="hand">
+		</fieldset>
+		<input type="submit" name="submit" value="save">
+		<button type="submit">Submit</button>
+		<input type="reset" name="reset" value="RESET">
+	</form>
+</body>
+</html>

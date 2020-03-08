@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS and Table</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var x = new Array("Dhaka", "Chattogram", "Rajshahi", "Khulna", "Borishal", "Sylhet", "Rangpur", "Mymensingh");
+	document.write("<table border='3'>");
+	document.write("<tr><th>ID</th><th>Districts</th></tr>");
+	for(i=0; i<x.length;i++){
+		document.write("<tr><td>");
+		document.write(i+1 + "</td><td>" + x[i]+ "</td></tr>");
+	}
+	document.write("</table>")
+</script>
+
+</body>
+</html>

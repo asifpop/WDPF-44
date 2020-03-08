@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var age, voteable;
+  age = document.getElementById("age").value;
+  voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+
+<script>
+	var x;//after declaration yes value could be found
+	result=(x)? "Yes":"No"
+	document.write(result);
+</script>
+
+</body>
+</html>

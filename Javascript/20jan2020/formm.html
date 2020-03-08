@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function myFunc(){
+			var uid = document.myForm.u.value;
+			var pass = document.myForm.p.value;
+			var nam = document.myForm.namee.value;
+			var addres = document.myForm.add.value;
+			var countri = document.myForm.country.value;
+			var zip = document.myForm.num1.value;
+			var email = document.myForm.email.value;
+			var gen = document.myForm.gender.value;
+			var abt = document.myForm.about.value;
+			var nameValid = /[A-z]$/; 
+			var zipValid = /[0-9]$/;
+			var emailValid = /^[A-z0-9]+@[A-z0-9]+\.[A-z]{2,3}$/; 
+			 
+			if (uid=="" || uid==null){
+				document.getElementById("mes").innerHTML="** Please fill up this field"
+				return false;
+
+			}else if(uid.length<8||uid.length>12){
+				document.getElementById("mes").innerHTML="** User ID must be 8 to 12 characters"
+				return false;
+
+			}else if(pass=="" || pass==null){
+				document.getElementById("mess").innerHTML="**password is required "
+				return false;
+
+			}else if(pass.length<7||pass.length>12){
+				document.getElementById("mess").innerHTML="**password must be 7 to 12 characters  "
+				return false;
+
+			}else if(nam=="" || nam==null){
+				document.getElementById("messa").innerHTML="**Please enter your name"
+				return false;
+
+			}else if(!nam.match(nameValid)){
+				document.getElementById("messa").innerHTML="**Number is not allowed"
+				return false;
+			
+			}
+			else if(countri=="" || countri==null){
+				document.getElementById("messag").innerHTML="**Please select one country"
+				return false;
+
+			}else if(zip=="" || zip==null || !zip.match(zipValid)){
+				document.getElementById("message").innerHTML="**Please select your ZIP Code"
+				return false;
+
+			}
+			else if(email=="" || email==null || !email.match(emailValid) ){
+				document.getElementById("messages").innerHTML="**Please select your Email"
+				return false;
+			}else if(gen=="" || gen==null){
+				document.getElementById("messagess").innerHTML="**Please select your gender"
+				return false;
+			}else if(abt=="" || abt==null){
+				document.getElementById("ab").innerHTML="**Please write something in about section"
+				return false;
+			}
+			else{
+				mywin=window.open("","name", "width=400px, height=400px");
+				mywin.document.write("User ID: " + uid + "<br>")
+				mywin.document.write("Password: " + pass +
+					"<br>")
+				mywin.document.write("Name: " + nam + "<br>")
+				mywin.document.write("Address: " + addres + "<br>")
+				mywin.document.write("Country: " + countri + "<br>")
+				mywin.document.write("Zip Code: " + zip + "<br>")
+				mywin.document.write("Email : " + email + "<br>")
+				mywin.document.write("Gender : " + gen + "<br>")
+				mywin.document.write("About : " + abt + "<br>")
+				return true;
+			}
+		}
+	</script>
+	<h2>Registration Form</h2>
+	<form name="myForm" onsubmit="return myFunc(this)">
+		<table>
+			<tr>
+				<th>User ID</th>
+				<td>:</td>
+				<td>
+					<input type="text" name="u" value="">
+					<span id="mes" style="color:red"></span>
+					
+				</td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td>:</td>
+				<td>
+					<input type="password" name="p"  value="">
+					<span id="mess" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>:</td>
+				<td>
+					<input type="text" name="namee"  value="">
+					<span id="messa" style="color:red"></span>
+
+				</td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td>:</td>
+				<td><input type="text" name="add"  value=""></td>
+			</tr>
+			<tr>
+				<th>Country</th>
+				<td>:</td>
+				<td>
+					<select name="country"  >
+						<option value="">--please select a country</option>
+						<option value="india">India</option>
+						<option value="china">China</option>
+						<option value="dobai">Dobai</option>
+					</select>
+					<span id="messag" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Zip Code</th>
+				<td>:</td>
+				<td><input type="text" name="num1"   value="">
+				<span id="message" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td>:</td>
+				<td><input type="text" name="email"   value="">
+					<span id="messages" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Sex</th>
+				<td>:</td>
+				<td><input type="radio" name="gender"   value="male">Male
+				<input type="radio" name="gender"  value="female">Female
+				<span id="messagess" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>About</th>
+				<td>:</td>
+				<td><textarea name="about" cols="30" rows="10" value=""></textarea>
+				<span id="ab" style="color:red"></span>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td></td>
+				<td>
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

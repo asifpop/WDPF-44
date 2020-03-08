@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Focus This</title>
+	<script type="text/javascript">
+		function fillitin(){
+			document.info.email.value="bill@sandlight.com";
+		}
+		function blankit(){
+			document.info.email.value="";
+		}
+	</script>
+</head>
+<body>
+<form name = "info">
+	PLease enter your email.
+	<input type="text" name="email" onfocus="fillitin()" onblur="blankit()">
+</form>
+</body>
+</html>

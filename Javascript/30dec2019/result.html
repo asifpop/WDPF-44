@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function result(){
+		var x = document.myform.mcq.value;
+		var y = document.myform.des.value;
+		var z = document.myform.evi.value;
+		var a = parseInt(x);
+		var b = parseInt(y);
+		var c = parseInt(z);
+		var total = a+b; 
+		if((total>59) && (c>29)){
+			document.write("You have passed");
+		}
+		else{
+			document.write("You have Failed");
+		}
+	}
+</script>
+
+<form name ="myform">
+<label>MCQ:</label>	<input type="number" name="mcq">
+<label>Descriptive:</label>	<input type="number" name="des">
+<label>Evidence:</label>	<input type="number" name="evi">
+<input type="button" onclick="result()" value = "Evaluate">
+</form>
+</body>
+</html>

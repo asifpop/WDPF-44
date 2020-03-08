@@ -1,0 +1,1 @@
+alert("Welcome to Javascript from external file");

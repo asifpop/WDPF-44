@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.write(fruits)
+fruits.splice(2, 0, "Lemon", "Kiwi");// 2 is the index and 0 is the number of removed items.w
+document.write(fruits)
+fruits.splice(2,1);//removes 'Lemon', array element starting from 0 index and stoping and removing 3rd element. 
+document.write(fruits)
+fruits.splice(2,1,"Grape");//removes 'kiwi' and adds 'Grape' 
+document.write(fruits)
+</script>
+
+</body>
+</html>

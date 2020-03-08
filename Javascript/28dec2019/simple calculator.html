@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>calculator</h2>
+	<form name="form2">
+		<input type="number" name="num11" placeholder="type a number"> <br>
+		<input type="number" name="num12" placeholder="type a number">
+	</form>
+	<button onclick="add()">+</button><button onclick="minus()">-</button><button onclick="multiply()">*</button> <button onclick="division()">/</button>
+	<script>
+		function add(){
+			var a = document.form2.num11.value;
+			var b = document.form2.num12.value;
+			var c = parseInt(a);
+			var d = parseInt(b);
+			var e = c+d;
+			document.getElementById("demo").innerHTML = e;
+			
+		}
+		function minus(){
+			var a = document.form2.num11.value;
+			var b = document.form2.num12.value;
+			var c = parseInt(a);
+			var d = parseInt(b);
+			var e = c-d;
+			document.getElementById("demo").innerHTML = e;
+			
+		}
+		function multiply(){
+			var a = document.form2.num11.value;
+			var b = document.form2.num12.value;
+			var c = parseInt(a);
+			var d = parseInt(b);
+			var e = c * d;
+			document.getElementById("demo").innerHTML = e;
+			
+		}
+		function division(){
+			var a = document.form2.num11.value;
+			var b = document.form2.num12.value;
+			var c = parseInt(a);
+			var d = parseInt(b);
+			var e = c / d;
+			document.getElementById("demo").innerHTML = e;
+			
+		}
+		
+	</script>
+
+	<h3 id="demo"></h3>
+</body>
+</html>

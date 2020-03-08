@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Value Checking</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function valueCheck(){
+			var x = document.myForm.num1.value;
+			var y = document.myForm.num2.value;
+			if (x==y){
+				alert("x is equal to y");	
+			}
+			else {
+				alert("x is not equal to y");	
+			}
+		}
+	</script>
+	
+	<form name="myForm">
+	
+	<input type="number" name="num1">
+	<input type="number" name="num2">
+	<button onclick="valueCheck()">Value Check</button>
+	
+	</form>
+</body>
+</html>

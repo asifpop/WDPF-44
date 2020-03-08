@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form validation</title>
+</head>
+<body>
+<script type="text/javascript">
+	function validity(){
+		var x = document.myform.Gender.value;
+		if(x==""||x==null){
+			alert("Please select gender");
+			return false;
+		}
+		else{
+			var mywin = window.open("","windowname","height=400","width=400");
+			mywin.document.write("Gender: "+x + "<br>");
+			return true;
+		}
+
+	}
+</script>
+
+<form name="myform" onsubmit="return validity()">
+<label>Male:</label><input type="radio" name="Gender" value="Male">
+<label>Female:</label><input type="radio" name="Gender" value="Female">
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>

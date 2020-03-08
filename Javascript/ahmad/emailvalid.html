@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Validation</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Validatee(form){
+			
+			var x = document.myForm.email.value;
+			var y = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			if(x==""){
+				alert("Please enter a valid email address")
+				return false;
+
+			}else if(!x.match(y)){
+
+				alert("Please enter a valid email address")
+				return false;
+			}
+			else{
+				var mywin = window.open("", "gmail", "height=400,width=400" );
+				mywin.document.write("Email: " +x + "<br>" );
+					return true;
+			}
+		}
+
+	</script>
+	<h2>Email Validation Form</h2>
+	<form name="myForm" onsubmit="return Validatee(this)">
+		<input type="text" name="email">
+		<input type="submit" name="validate">
+
+	</form>
+</body>
+</html>

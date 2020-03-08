@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Horizontal menu</title>
+	<style>
+		.hmenu ul{
+			list-style-type:none;
+			background-color:powderblue;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;	
+		}
+		.hmenu li a{
+			text-decoration:none;
+			padding:10px 20px;
+			font-size:20px;
+			display:block;
+			letter-spacing: 2px;
+		}
+		.hmenu ul li{
+			float:left;
+			border-right:1px solid gray;
+		}
+		.hmenu ul li:last-child{
+			border-right:none;
+		}
+		.hmenu ul li a:hover{
+			background-color: black;
+			color: white;
+		}
+		.active{
+			background-color:green;
+		}
+	</style>
+</head>
+<body>
+	<div class="hmenu">
+		<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Form</a></li>
+			<li><a href="#">Activities</a></li>
+			<li style="float:right"><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input[type=text]:enabled{
+			background-color: green;
+			color:white;
+		}
+		input[type=text]:disabled{
+			background-color: grey;
+		}
+		input[type=radio]:checked{
+			height:50px;
+			width:50px;
+		}
+		input[type=checkbox]:checked{
+			height:50px;
+			width:50px;
+		}
+	</style>
+</head>
+<body>
+<form action="">
+	<input type="text" name="fullname" placeholder="Enter Your Name:"><br>
+	<input type="text" name="fname" placeholder="Enter Your Father's Name:"><br>
+	<input type="text" name="peraddress" disabled="" placeholder="Enter Permanent Address"><br>
+	
+	Male:<input type="radio" name="gender" value="male">
+	Female:<input type="radio" name="gender" value="female"><br>
+	hobbies: cricket<input type="checkbox" name="cricket" value="cric">	
+	 football<input type="checkbox" name="football" value="foot">	
+	 rugby<input type="checkbox" name="cricket" value="cric">	
+	<input type="submit" value="Submit">
+</form>	
+</body>
+</html>

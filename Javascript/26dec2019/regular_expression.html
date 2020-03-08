@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var text = "Working with javascript is hard work but rewarding work."
+		var result = text.replace(/work/gi, "Play");
+		document.write("<p><b>" + text + "</b></p>" + result); 
+	</script>
+	<p>Click the button to do a global search for the character "h" in a string.</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+	function myFunction() {
+	  var str = "Is this all there is?";
+	  var patt1 = /[^a-h]/g; 
+	  var result = str.match(patt1);
+	  document.getElementById("demo").innerHTML = result;
+	}
+</script>
+</body>
+</html>

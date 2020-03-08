@@ -1,0 +1,21 @@
+.service{
+	height:200px;
+	background-color:green;
+	border:3px solid blue; 
+}
+.slogan1{
+	height:300px;
+	border:2px solid red;
+	background-color: pink;
+}
+
+.slogan2{
+	height:300px;
+	border:2px solid yellow;
+	background-color: magenta;
+}
+.service1{
+	height:100px;
+	background-color:green;
+	border:3px solid blue; 
+}

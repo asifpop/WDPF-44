@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Password</title>
+	<script language="Javascript">
+	function checkIt( ) {
+	var verify=document.pass.word.value;
+		if (verify=="JavaScript") {
+		alert("You may pass.")
+		} else {
+		alert("Sorry, you\'re out of luck.")
+		}
+	}
+	</script>
+</head>
+
+<body>
+
+<h3>Please enter your password and then
+<br> click on the page out of the text box:</h3>
+
+<form name="pass">
+Name:<input type="text" name="name1">
+some space <input type=password name="word"
+onBlur="checkIt( );"> more space
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkbox validation</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validity(){
+		var chval= new Object();
+		chval=document.myform;
+		var display="";
+			for (var counter=0; counter < chval.length; counter++) {       
+
+				if(chval.elements[counter].checked) {             
+				display += chval.elements[counter].value + "<br>";              
+				}        
+			}
+
+			var mywin= window.open("","windowname","height=400","width=400");
+			mywin.document.write(display);
+		
+}
+	</script>
+
+
+<form name="myform" onsubmit="return validity()">
+<label>PHP</label>	<input type="checkbox" name="PHP" value="PHP">
+<label>MYSQL</label>	<input type="checkbox" name="MYSQL" value="MYSQL">
+<label>ORACLE</label>	<input type="checkbox" name="ORACLE" value="ORACLE">
+<label>JAVA</label>	<input type="checkbox" name="JAVA" value="JAVA">
+<label>JAVASCRIPT</label>	<input type="checkbox" name="JAVASCRIPT" value="JAVASCRIPT">
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>

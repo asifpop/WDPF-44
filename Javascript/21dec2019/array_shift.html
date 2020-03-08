@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array shift method</title>
+</head>
+
+<body>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		document.getElementById("demo1").innerHTML = fruits;
+		fruits.shift(); //deletes element at first position.
+		document.getElementById("demo2").innerHTML = fruits;
+		fruits.unshift("watermelon");//adds element at first position.
+		document.write(fruits);
+	</script>
+</body>
+</html>

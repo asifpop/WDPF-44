@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled Document</title>
+
+<script>
+
+function profile(){
+	with (document.person){
+	var fullname=fullname1.value;
+	var address=address1.value;
+	var district=district1.value;
+	
+	var line1= "Name:"+ fullname;
+	var line2= "Address: "+ address + "district: "+ district;
+	var line=line1 + "\n"+ line2;
+	alert(line); //variable name and name of the element of the form must have to be different. otherwise alert will not work. 
+	}
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+	<form name="person">
+       <input type="text" name = "fullname1" placeholder="Enter name">	<br>
+       <textarea name="address1" placeholder = "address" rows="8" cols="15"></textarea> 
+       <br>
+       <select name="district1">
+       
+        <option>Dhaka</option>
+        <option>chittagong</option>
+ 		<option>khulna</option>
+		<option>sylhet</option>
+
+       
+       </select> <br> 
+       <button onclick="profile()"> click here</button> 
+   </form>
+
+</body>
+</html>

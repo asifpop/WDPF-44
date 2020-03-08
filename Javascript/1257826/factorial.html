@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script>
+    function factorial(x){
+	 x = Number(document.myform.num.value);
+		if(x==0){
+			return 1;
+			}
+		return x*factorial(x-1);
+	}
+    </script>
+    <form name = "myform">
+    
+    <input type = "number" name= "num">
+    <input type = "submit" value = "Submit" onclick="factorial(this.val())">
+    
+    </form>
+    
+</body>
+</html>

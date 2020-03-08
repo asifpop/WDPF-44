@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var x = new Image();
+	x.src = "Mountain.jpg"
+	var y = new Image();
+	y.src = "Sea.jpg"
+	function switch1(){
+		document.sample.src=x.src;
+	}
+	function switch2(){
+		document.sample.src=y.src;
+	}
+</script>
+	<a href="#"><img src="Sea.jpg" name="sample" onmouseover="switch1()" onmouseout="switch2()" width="400" height="400"> </a>
+</body>
+</html>
