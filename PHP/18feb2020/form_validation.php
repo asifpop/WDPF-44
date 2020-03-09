@@ -6,8 +6,14 @@
 <body>  
 
 <?php
+	echo "<pre>";
+	print_r($_SERVER);
+	echo "</pre>";
+
 // define variables and set to empty values
 $name = $email = $gender = $comment = $website = "";
+
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
