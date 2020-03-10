@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function validate(){
+	var n = document.myform.Name.value;
+	var nameValid = /^[A-z ]{6,32}$/;
+	var mail = document.myform.email.value;
+	var emailValid = /^[A-z0-9]+@[A-z0-9]+\.[A-z]{2,3}$/;
+	var gend = document.myform.gender.value;
+	
+	var subj = new Object();
+	subj = document.myform;
+	var i;
+	var subjectChoice="";
+	for (i=4;i<subj.length;i++){
+		if(subj.elements[i].checked){
+			subjectChoice += subj.elements[i].value+ "<br>";
+			
+		}
+	}
+	var dist = document.myform.dist.value;
+
+
+	if (!n.match(nameValid)){
+		alert("Please Enter a Valid Name. Must be within 6 to 32 characters.");
+		return false;
+	} 
+	else if (!mail.match(emailValid)){
+		alert("Please enter valid email address");
+		return false;
+	}
+	else if(gend==""||gend==null){
+		alert("Please select gender");
+		return false;
+	}
+	else if (subjectChoice==''||subjectChoice==null){
+		alert("Please choose a subject.");
+		return false;
+
+		
+	}
+	else if(dist==""||dist==null){
+		alert("Please choose a district.");
+		return false;
+	}
+	else {
+		var mywin = window.open("","windowname","height:400", "width:400");
+		mywin.document.write("Name: "+ n + "<br>");
+		mywin.document.write("Email: "+mail + "<br>");
+		mywin.document.write("Gender: " + gend + "<br>");
+		mywin.document.write("Subject: " + subjectChoice);
+		mywin.document.write("District: "+ dist + "<br>");
+		return true;
+	}
+}
+	
+</script>
+
+
+
+<form name="myform" onsubmit="return validate()">
+	
+	<label>Name:</label><input type="text" name="Name" placeholder="Enter your name"><br>
+	<label>Email:</label><input type="text" name="email" placeholder="Enter your email"><br>
+	<label>Gender:</label><label>Male</label><input type="radio" name="gender" value="Male">				  <label>Female</label><input type="radio" name="gender" value="Female"><br>
+	<label>Subject:</label>
+						   <label>PHP</label><input type="checkbox" name="PHP" value="PHP">
+						   <label>MYSQL</label><input type="checkbox" name="MYSQL" value="MYSQL">
+						   <label>ORACLE</label><input type="checkbox" name="ORACLE" value="ORACLE">
+						   <label>JAVA</label><input type="checkbox" name="JAVA" value="JAVA"><br>
+	<label>District:</label>
+		<select name="dist">
+			<option value="">Select One</option>
+			<option value="Dhaka">Dhaka</option>
+			<option value="Chittagong">Chittagong</option>
+			<option value="Rajshahi">Rajshahi</option>
+			<option value="Khulna">Khulna</option>
+		</select>
+	<input type="submit" name="Submit" value = "Submit">
+</form>
+
+</body>
+</html>
